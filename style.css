@@ -4,8 +4,7 @@ body {
     background: #000;
     color: #fff;
     font-family: 'Roboto Mono', monospace;
-    overflow-x: hidden;
-    cursor: none;
+    overflow-x: hidden; 
     min-height: 100vh;
 }
 
@@ -18,7 +17,7 @@ body {
     z-index: 1;
 }
 
-.cursor {
+/*.cursor {
     position: fixed;
     width: 20px;
     height: 20px;
@@ -538,4 +537,169 @@ h1.glitch {
     transform: scale(1.05) translateY(-10px);
     border-color: cyan;
     box-shadow: 0 0 60px cyan;
+}
+
+/* ================= REDES SOCIALES FLOTANTES ================= */
+.social-float {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    z-index: 9999;
+}
+
+.social-btn {
+    width: 55px;
+    height: 55px;
+    background: rgba(0, 255, 255, 0.15);
+    border: 2px solid cyan;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+    transition: all 0.4s ease;
+}
+
+.social-btn:hover {
+    transform: translateY(-8px) scale(1.2);
+    background: cyan;
+    box-shadow: 0 0 50px cyan;
+}
+
+.social-btn img {
+    width: 32px;
+    filter: drop-shadow(0 0 10px cyan);
+}
+
+/* ================= ACTUALMENTE ESTOY... ================= */
+.now-playing {
+    margin: 80px auto;
+    max-width: 800px;
+    padding: 40px;
+    background: rgba(0, 255, 255, 0.05);
+    border: 2px solid rgba(0, 255, 255, 0.4);
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+    text-align: center;
+    box-shadow: 0 0 50px rgba(0, 255, 255, 0.3);
+}
+
+.now-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.8rem;
+    color: cyan;
+    text-shadow: 0 0 20px cyan;
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+}
+
+.now-content {
+    font-size: 1.5rem;
+    line-height: 2.2;
+    color: #e0ffff;
+}
+
+.now-icon {
+    font-size: 1.8rem;
+    color: cyan;
+    margin-right: 10px;
+    
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .social-float { 
+        left: 10px; 
+        gap: 12px;
+    }
+    .social-btn { 
+        width: 48px; 
+        height: 48px; 
+    }
+    .now-playing { 
+        margin: 50px 20px; 
+        padding: 30px; 
+    }
+    .now-title { 
+        font-size: 2.2rem; 
+    }
+}
+
+/* ================= BOTÓN DESCARGAR CV ================= */
+.cv-section {
+    text-align: center;
+    padding: 80px 40px;
+    margin: 120px auto;
+    max-width: 900px;
+    background: rgba(0, 255, 255, 0.05);
+    border: 2px solid rgba(0, 255, 255, 0.4);
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 60px rgba(0, 255, 255, 0.3);
+}
+
+.cv-section h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: cyan;
+    text-shadow: 0 0 20px cyan;
+}
+
+.cv-section p {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.btn-cv {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 50px;
+    background: transparent;
+    border: 3px solid cyan;
+    color: cyan;
+    font-size: 1.8rem;
+    font-weight: 900;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.6);
+    transition: all 0.4s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.btn-cv:hover {
+    background: cyan;
+    color: #000;
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 80px cyan;
+}
+
+.btn-icon {
+    font-size: 2.5rem;
+    transition: transform 0.4s;
+}
+
+.btn-cv:hover .btn-icon {
+    transform: rotate(360deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cv-section {
+        margin: 80px 20px;
+        padding: 60px 20px;
+    }
+    .cv-section h2 { font-size: 2.8rem; }
+    .btn-cv { 
+        padding: 18px 40px; 
+        font-size: 1.5rem; 
+    }
 }
